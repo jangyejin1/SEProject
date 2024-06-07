@@ -240,6 +240,23 @@ class Policy{
   Map<String, int> grades;
   bool show;
 
+  String returnPolicy(){
+    String result = '';
+    grades.forEach((key, value) {
+      result += '$key: $value ';
+    });
+    return result;
+  }
+
+  String returnShow(){
+    if(show == true){
+      return '성적 공개';
+    }
+    else{
+      return '성적 비공개';
+    }
+  }
+  
   Policy({required this.title, required this.grades, required this.show});
 }
 

@@ -35,7 +35,7 @@ class _PolicyState extends State<PolicyPage> {
               },
               title: Center(
                 child: Text(
-                  myController.users[myController.selectedUser.value].courses[index],
+                  myController.users[myController.selectedUser.value].courses[index]+'\n${myController.policies.firstWhere((element) => element.title == myController.users[myController.selectedUser.value].courses[index]).returnPolicy()}\n${myController.policies.firstWhere((element) => element.title == myController.users[myController.selectedUser.value].courses[index]).returnShow()}',
                   style: TextStyle(fontSize: 18),
                 ),
               ),
@@ -180,6 +180,7 @@ class _PolicyListState extends State<PolicyList> {
                     subject.show = _checkboxValue;
                   });
                   Get.back();
+                  Get.snackbar('변경 완료', '성적 정책이 반영되었습니다.');
                 }
 
               },

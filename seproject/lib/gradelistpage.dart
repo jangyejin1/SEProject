@@ -32,6 +32,9 @@ class GradeListPage extends StatelessWidget {
                         Text("평균 점수: ${assignment.average.toStringAsFixed(2)}"),
                         Text("최소 점수: ${assignment.minScore.toStringAsFixed(2)}"),
                         Text("최대 점수: ${assignment.maxScore.toStringAsFixed(2)}"),
+                        Divider(),
+                        Text("문항별 점수:", style: TextStyle(fontWeight: FontWeight.bold)),
+                        ...assignment.questions.map((question) => Text("${question.title}: ${question.score.toStringAsFixed(2)}")).toList(),
                       ],
                     ),
                     actions: [
