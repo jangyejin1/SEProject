@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         return AlertDialog(content: Text("학생은 성적 조회만 가능합니다."));
                       });
                     } else {
-                      Get.to(() => CourseListPage());
+                      Get.to(CourseListPage());
                     }
                   }),
                   roleButton("정책 설정", Icons.policy, () {

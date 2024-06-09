@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:seproject/dataController.dart';
 
+
+
 class CourseListPage extends StatelessWidget {
   final myController = Get.put(DataController());
   @override
